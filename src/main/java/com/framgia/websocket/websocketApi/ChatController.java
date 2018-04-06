@@ -1,6 +1,6 @@
-package com.example.websocket.controller;
+package com.framgia.websocket.websocketApi;
 
-import com.example.websocket.model.ChatMessage;
+import com.framgia.websocket.model.ChatMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -28,5 +28,4 @@ public class ChatController {
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
         return chatMessage;
     }
-
 }

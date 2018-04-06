@@ -1,4 +1,4 @@
-package com.example.websocket;
+package com.framgia.websocket;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

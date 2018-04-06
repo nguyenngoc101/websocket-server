@@ -1,6 +1,6 @@
-package com.example.websocket.controller;
+package com.framgia.websocket.websocketApi;
 
-import com.example.websocket.model.ChatMessage;
+import com.framgia.websocket.model.ChatMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +33,7 @@ public class WebSocketEventListener {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(event.getMessage());
 
         String username = (String) headerAccessor.getSessionAttributes().get("username");
+        logger.info("Client " + username + " disconnected");
         if(username != null) {
             logger.info("User Disconnected : " + username);
 
@@ -43,6 +44,4 @@ public class WebSocketEventListener {
             messagingTemplate.convertAndSend("/topic/public", chatMessage);
         }
     }
-
-
 }
