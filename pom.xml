@@ -44,7 +44,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>1.5.10.RELEASE</version>
+            <version>3.1.9</version>
         </dependency>
 
 		<dependency>
